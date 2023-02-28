@@ -46,6 +46,19 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+
+/*
+|--------------------------------------------------------------------------
+| Return The AUthorization
+|--------------------------------------------------------------------------
+|
+| This script returns the application authurization instance. The instance is given to
+| the calling script so we can separate the building of the instances
+| from the actual running of the application and sending responses.
+|
+*/
+
+new Illuminate\Auth\Access\AppAccess;
 /*
 |--------------------------------------------------------------------------
 | Return The Application
